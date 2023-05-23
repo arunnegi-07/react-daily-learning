@@ -5,9 +5,13 @@
 
 Here are some key features and benefits of Emmet:
 
-1. **Abbreviations:** Emmet allows you to write short abbreviations and expand them into complete HTML or CSS code snippets. For example, you can type **ul>li.item*5** and expand it to a list with five list items.
-    ![example1-emmet](./assets/emmet-example1.png)
-   
+1. **Abbreviations:** Emmet allows you to write short abbreviations and expand them into complete HTML or CSS code snippets. For example, you can type **ul>li.item*5** and expand it to a list with **five list items**.
+
+   <img src="https://i.ibb.co/mX3YjVk/emmet-example1.png" alt="emmet-example1" border="0">
+
+2. **Nested Elements:** With Emmet, you can easily create nested HTML elements. For instance, typing **nav>ul>li** will generate **five navigation bar structure with an unordered list and list item**. 
+
+   <img src="https://i.ibb.co/TrNhz0Q/emmet-example2.png" alt="emmet-example2" border="0">
 ##
 
 ### 2. Difference between a Library and Framework ?
@@ -65,41 +69,36 @@ In simple terms, **React** is the brain behind creating and managing UI componen
 ##
    
 ### 6. What is difference between "react.development.js" and "react.production.js" files via CDN ?
-**Development** is the stage of an application before it's made public while `production` is the term used for the same application when it's made `public`.
-`Development build` is several times (maybe 3-5x) `slower` than the `production build`.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+In brief, the main difference between **react.development.js** and **react.production.js** files via **CDN** is the level of optimization and performance.
+
+**react.development.js**:
+    
+This file is intended for **development purposes**. It includes additional error checking, warnings, and helpful development tools. It is **larger in size** and provides more detailed error messages and warnings to aid in debugging and development. However, it is **not optimized for production use** and may have reduced performance.
+
+```sh
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>  // For React
+ 
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  // For React DOM
+```
+    
+**react.production.js**: 
+    
+This file is optimized for **production environments**. It is **smaller in size** as it removes development-specific checks, warnings, and tools. It is designed to be used in production deployments where performance is crucial. By excluding the development-specific code, it helps reduce the file size and improve the overall performance of the React application.
+
+In summary, **react.development.js** is larger in size and includes development tools and error messages to assist in debugging, while **react.production.js** is smaller, optimized for performance, and suitable for production deployments 
+
+```sh
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>  // For React
+ 
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>  // For React DOM
+```
+
+## 
+    
+### 7. What is async and defer ?
+
+
+
+
+
+
