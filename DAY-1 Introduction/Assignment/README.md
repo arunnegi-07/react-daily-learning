@@ -32,7 +32,7 @@ The main use of a **CDN** is to deliver content through a network of servers in 
 
 **Note:** For React we have included following **CDN** links:
 
-```sh
+```bash
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>  // For React
  
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  // For React DOM
@@ -51,7 +51,7 @@ Here's what it does:
 
 **Cross-origin**: If you include a **JavaScript** file from a different domain or origin, the browser treats it as **"cross-origin"**, This means the browser may apply security measures to prevent potential security risks, such as accessing sensitive data or modifying the page.   
 
-```sh
+```bash
 <script crossorigin src="..."></script>
 ```
    
@@ -71,23 +71,23 @@ In simple terms, **React** is the brain behind creating and managing UI componen
 ### 6. What is difference between "react.development.js" and "react.production.js" files via CDN ?
 In brief, the main difference between **react.development.js** and **react.production.js** files via **CDN** is the level of optimization and performance.
 
-**react.development.js**:
+- ### react.development.js:
     
 This file is intended for **development purposes**. It includes additional error checking, warnings, and helpful development tools. It is **larger in size** and provides more detailed error messages and warnings to aid in debugging and development. However, it is **not optimized for production use** and may have reduced performance.
 
-```sh
+```bash
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>  // For React
  
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>  // For React DOM
 ```
     
-**react.production.js**: 
+- ### react.production.js: 
     
 This file is optimized for **production environments**. It is **smaller in size** as it removes development-specific checks, warnings, and tools. It is designed to be used in production deployments where performance is crucial. By excluding the development-specific code, it helps reduce the file size and improve the overall performance of the React application.
 
 In summary, **react.development.js** is larger in size and includes development tools and error messages to assist in debugging, while **react.production.js** is smaller, optimized for performance, and suitable for production deployments 
 
-```sh
+```bash
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>  // For React
  
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>  // For React DOM
@@ -97,8 +97,32 @@ In summary, **react.development.js** is larger in size and includes development 
     
 ### 7. What is async and defer ?
 
+- **Normal script tag**:
+   
+When you include a **script** using a normal script tag, the browser will parse the HTML and execute the script immediately.
+This means that the **rendering** of the HTML **will pause** until the script has finished downloading and executing. If there are multiple scripts included in this way, they will be executed in the order they appear in the HTML.
 
+```bash
+<script src="script.js"></script>
+```
+   
+- **Script tag with attribute "async"**:
+   
+When you add the **async** attribute to a script tag, it tells the browser to download the script **asynchronously** while continuing to parse the HTML. Once the script is downloaded, it will execute as soon as possible, even if the HTML parsing is not yet complete. Multiple scripts with the "async" attribute may be downloaded and executed in any order.
 
+```bash
+<script src="script.js" async></script>
+```
+   
+- **Script tag with attribute "defer"**:
+   
+The **defer** attribute also allows the HTML parsing to continue while the script is being downloaded, similar to the **async** attribute. However, scripts with the **defer** attribute will only be executed after the HTML **parsing is complete**. If there are multiple scripts with the "defer" attribute, they will be executed in the order they appear in the HTML. 
+   
+```bash
+<script src="script.js" defer></script> 
+```   
 
+**Diagrammatic representation**:
 
-
+<img src="https://i.ibb.co/bK72Yp5/whats-the-difference-between-async-vs-defer-attributes.jpg" alt="whats-the-difference-between-async-vs-defer-attributes" border="0" width=
+"100%">
